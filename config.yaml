@@ -1,0 +1,42 @@
+
+audios:
+  - name: audio1
+    pipewire-settings:
+      sample-rate: 11000
+      channels: 2
+      sample-size: 1024
+      fragment-size: 4096
+      capture-mic: false
+      audio-format: F32_LE
+
+    shaders:
+    #  - name: linear
+    #    margin-bottom: 30
+    #    margin-left: 30
+    #    anchor-left: true
+    #    anchor-bottom: true
+    #    layer: Bottom
+    #    window-width: 300
+    #    window-height: 200
+
+      - name: angular
+        margin-bottom: 30
+        margin-right: 20
+        anchor-right: true
+        anchor-bottom: true
+        layer: Bottom
+        window-width: 300
+        window-height: 300
+
+      - name: ncs
+        atomic-textures: 1
+        margin-top: -50
+        margin-right: 340
+        anchor-right: true
+        anchor-top: true
+        layer: Overlay
+        window-width: 40
+        window-height: 40
+        post-processing:
+          - name: glow
+            passes: 1
